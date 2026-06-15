@@ -1,40 +1,16 @@
-# ============================================================
-# knn.py - Implementasi Algoritma KNN secara manual
-# ============================================================
-
 import math
+import pandas as pd
 
-# ---------- Data Training ----------
-# Format: [pendapatan, pengeluaran, ump, jam_kerja, label]
-DATA = [
-    [7500000, 3000000, 3000000, 40, "Sejahtera"],
-    [8000000, 3500000, 3200000, 40, "Sejahtera"],
-    [9000000, 4000000, 3500000, 45, "Sejahtera"],
-    [10000000, 4500000, 3000000, 40, "Sejahtera"],
-    [6500000, 2800000, 2800000, 40, "Sejahtera"],
-    [7000000, 3200000, 3000000, 42, "Sejahtera"],
-    [12000000, 5000000, 3500000, 40, "Sejahtera"],
-    [8500000, 3800000, 3200000, 44, "Sejahtera"],
-    [6000000, 2600000, 2800000, 40, "Sejahtera"],
-    [4500000, 3000000, 2800000, 40, "Cukup Sejahtera"],
-    [5000000, 3200000, 3000000, 40, "Cukup Sejahtera"],
-    [5500000, 3500000, 3200000, 42, "Cukup Sejahtera"],
-    [4800000, 3100000, 2800000, 35, "Cukup Sejahtera"],
-    [5200000, 3400000, 3000000, 40, "Cukup Sejahtera"],
-    [4200000, 2900000, 2500000, 38, "Cukup Sejahtera"],
-    [5800000, 3800000, 3200000, 40, "Cukup Sejahtera"],
-    [4600000, 3050000, 2800000, 36, "Cukup Sejahtera"],
-    [5100000, 3300000, 3000000, 40, "Cukup Sejahtera"],
-    [2000000, 1900000, 2500000, 30, "Kurang Sejahtera"],
-    [1800000, 1700000, 2300000, 25, "Kurang Sejahtera"],
-    [2500000, 2400000, 2800000, 35, "Kurang Sejahtera"],
-    [1500000, 1450000, 2000000, 20, "Kurang Sejahtera"],
-    [2200000, 2100000, 2500000, 30, "Kurang Sejahtera"],
-    [1700000, 1650000, 2300000, 22, "Kurang Sejahtera"],
-    [2800000, 2700000, 3000000, 35, "Kurang Sejahtera"],
-    [2100000, 2000000, 2500000, 28, "Kurang Sejahtera"],
-    [1900000, 1850000, 2300000, 25, "Kurang Sejahtera"],
-]
+# Membaca file CSV menggunakan Pandas
+df = pd.read_csv('dataset_pekerja.csv')
+
+# Mengubah dataframe Pandas kembali menjadi List agar bisa diproses algoritma KNN manual
+DATA = df.values.tolist()
+
+# ---------- Normalisasi Min-Max ----------
+# (Sisa kode di bawahnya biarkan saja, jangan ada yang diubah)
+def hitung_minmax(data):
+    ...
 
 # ---------- Normalisasi Min-Max ----------
 # Ubah nilai ke rentang [0,1] agar fitur tidak saling mendominasi
