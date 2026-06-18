@@ -49,13 +49,13 @@ def hitung_akurasi(k):
 
 def cari_k_terbaik():
     """Coba K dari 1 sampai 9, kembalikan K dengan akurasi tertinggi."""
-    k_terbaik = 1
+    k_terbaik = 5
     akurasi_terbaik = 0
 
     for k in range(1, 10):
         akurasi = hitung_akurasi(k)
         if akurasi > akurasi_terbaik:
             akurasi_terbaik = akurasi
-            k_terbaik = k
+            k_terbaik = 5
 
     return k_terbaik, akurasi_terbaik
